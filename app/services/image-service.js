@@ -1,5 +1,5 @@
-import store from "../store";
-import Image from "../models/image";
+import store from "../store.js";
+import Image from "../models/image.js";
 
 // @ts-ignore
 const imgApi = axios.create({
@@ -10,7 +10,7 @@ const imgApi = axios.create({
 //TODO create methods to retrieve data trigger the update window when it is complete
 class ImageService {
   constructor(){
-  this.getImage();
+  this.getImage()
 }
 
 getImage() {
@@ -18,8 +18,7 @@ getImage() {
   .get()
   .then(res => {
     console.log(res.data)
-    let rawDataObj = res.data
-    store.commit('images', rawDataObj)
+    store.commit('image', res.data)
     })
     .catch(err => console.error(err))
 }

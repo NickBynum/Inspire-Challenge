@@ -10,7 +10,7 @@ let _state = {
   todos: [], //TODO change 'any' to your todo model **done**
     /** @type {Image} */
     // @ts-ignore
-    images: {}
+    image: {}
 };
 
 /** Collection of listeners to be called based on keyed state changes
@@ -19,7 +19,7 @@ let _state = {
 let _listeners = {
   weather: [],
   todos: [],
-  images:[],
+  image:[],
 };
 
 /**
