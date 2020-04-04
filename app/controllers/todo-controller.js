@@ -15,18 +15,17 @@ export default class TodoController {
     //TODO Remember to register your subscribers **done**
     TodoService.getTodos();
     store.subscribe("todos", _drawTodos)
-    _drawTodos()
   }
 
-  addTodo(e) {
-    e.preventDefault();
-    var formData = e.target;
-    var todo = {
+  addTodo(event) {
+    event.preventDefault();
+    let formData = event.target;
+    let newTodoObj = {
       //TODO build the todo object from the data that comes into this method **done I think might need id etc**
       description: formData.description.value,
     };
 
-    TodoService.addTodoAsync(todo);
+    TodoService.addTodoAsync(newTodoObj);
     formData.reset();
   }
 
@@ -40,4 +39,3 @@ export default class TodoController {
     TodoService.removeTodoAsync(todoId);
   }
 }
-document.getElementById("").style.backgroundImage

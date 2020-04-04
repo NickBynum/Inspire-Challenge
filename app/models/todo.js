@@ -1,13 +1,13 @@
 export default class Todo {
 
-constructor(data) {
-  this.id = data.id || data._id;
-  this.description = data.description;
-  this.completed = data.completed;
-}
+  constructor(data) {
+    this.id = data.id || data._id;
+    this.description = data.description;
+    this.completed = data.completed;
+  }
 
-get Template() {
-  return /*html*/ `
+  get Template() {
+    return /*html*/ `
   <dd>
   <div class="row">
     <div class="col-12 d-flex">
@@ -18,6 +18,6 @@ get Template() {
       </>
 </dd>
   `
-}
+  }
 
 }

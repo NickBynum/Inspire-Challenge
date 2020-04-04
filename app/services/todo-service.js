@@ -3,7 +3,7 @@ import Todo from "../models/todo.js";
 
 // @ts-ignore
 const todoApi = axios.create({
-  baseURL: "https://bcw-sandbox.herokuapp.com/api/darryl/todos/",
+  baseURL: "https://bcw-sandbox.herokuapp.com/api/nick/todos/",
   timeout: 8000
 });
 
@@ -23,8 +23,11 @@ class TodoService {
     //TODO Handle this response from the server (hint: what data comes back, do you want this?)
     todoApi.post("", todo)
     .then(res => {
-      let todo
-    });
+      let newTodo = new Todo (res.data.data);
+      let todos = [newTodo, ...store.State.todos];
+      store.commit("todos", todos);
+    })
+    .catch(err => console.error(err));
   }
 
   toggleTodoStatusAsync(todoId) {
