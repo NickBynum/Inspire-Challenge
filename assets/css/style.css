@@ -1,19 +1,14 @@
-#todo-error{
-  color: red;
-  font-size: 2em;
-}
 ::placeholder{
   color: whitesmoke !important;
 }
 
 #todo-col{
   background-color: rgba(68, 68, 68, 0.637);
-}
-#todo-col{
   color: whitesmoke;
+  text-shadow: 50px rgb(24, 24, 24) !important;
 }
 body{
   background-size: cover;
-  background-repeat: no-repeat;
-  /* background-position: center; */
+  /* background-repeat: no-repeat;
+     background-position: center; */
 }

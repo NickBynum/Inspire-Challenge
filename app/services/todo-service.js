@@ -12,26 +12,30 @@ class TodoService {
     //TODO Handle this response from the server **done**
     console.log("Getting the Todo List");
     todoApi.get()
-    .then(res => {
-      let todos = res.data.data.map(rawTodoData => new Todo(rawTodoData));
-      store.commit("todos", todos)
-    })
-    .catch(err => console.error(err));
+      .then(res => {
+        let todos = res.data.data.map(rawTodoData => new Todo(rawTodoData));
+        store.commit("todos", todos)
+      })
+      .catch(err => console.error(err));
   }
 
   addTodoAsync(todo) {
     //TODO Handle this response from the server (hint: what data comes back, do you want this?)
     todoApi.post("", todo)
-    .then(res => {
-      let newTodo = new Todo (res.data.data);
-      let todos = [newTodo, ...store.State.todos];
-      store.commit("todos", todos);
-    })
-    .catch(err => console.error(err));
+      .then(res => {
+        let newTodo = new Todo(res.data.data);
+        let todos = [newTodo, ...store.State.todos];
+        store.commit("todos", todos);
+        console.log(todo);
+
+      })
+      .catch(err => console.error(err));
   }
 
   toggleTodoStatusAsync(todoId) {
     let todo = store.State.todos.find(todo => todo.id == todoId);
+    console.log(todo);
+    
     //TODO Make sure that you found a todo,
     //		and if you did find one
     //		change its completed status to whatever it is not (ex: false => true or true => false)
@@ -41,9 +45,12 @@ class TodoService {
   }
 
   removeTodoAsync(todoId) {
-    //TODO Work through this one on your own
-    //		what is the request type
-    //		once the response comes back, what do you need to insure happens?
+    todoApi.delete(todoId)
+      .then(res => {
+        console.log(res.data)
+        this.getTodos()
+      })
+      .catch(err => console.error(err))
   }
 }
 

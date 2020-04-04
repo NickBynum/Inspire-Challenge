@@ -11,10 +11,10 @@ export default class Todo {
   <dd>
   <div class="row">
     <div class="col-12 d-flex">
-      <input type="checkbox" class="bg-success align-self-center">
+      <input onclick="app.todoController.toggleTodoStatus('${this.id}')" name="completed" type="checkbox" class="bg-success align-self-center">
       <span class="ml-2">${this.description}</span>
       <button class="btn fa fa-trash-o text-danger ml-auto"
-        onclick="app.listController.removeTodo('${this.id}')">
+        onclick="app.todoController.removeTodo('${this.id}')">
       </>
 </dd>
   `
