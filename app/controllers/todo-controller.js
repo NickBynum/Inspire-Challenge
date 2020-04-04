@@ -8,9 +8,7 @@ function _drawTodos() {
 
   todos.forEach(todo => (template += todo.Template));
   document.getElementById("todos").innerHTML = template;
-  document.getElementById("numTodos").innerHTML = `<p>Chores Left: ${todos.length}<p>`
-  console.log(todos);
-  
+  document.getElementById("numTodos").innerHTML = `<p>Chores Left: ${todos.length}<p>`  
 }
 
 export default class TodoController {
