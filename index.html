@@ -20,7 +20,8 @@
 				<div class="row justify-content-between">
 					<div class="col-12 col-md-3">
 						<!-- Search form -->
-						<form class="form-inline d-flex justify-content-center md-form form-sm mt-0" method="get" action="http://www.google.com/search">
+						<form class="form-inline d-flex justify-content-center md-form form-sm mt-0" method="get"
+							action="http://www.google.com/search">
 							<i class="fa fa-search" aria-hidden="true"></i>
 							<input id="searchInput" class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search"
 								aria-label="Search">
@@ -37,39 +38,41 @@
 	</div>
 	<div class="container-fluid">
 		<div class="row justify-content-end">
-			<div class="col-12 col-md-6">
+			<div class="col-12">
 				<div class="row justify-content-center">
 					<div class="col-12">
 					</div>
 					<span id="clock"><i class="fa fa-clock-o" aria-hidden="true"></i></span>
 				</div>
 			</div>
-			<div id="todo-col" class="col-12 col-md-3 text-center col-md-py-2 col-md-m-2">
-				<h2>Better Get Busy!</h2>
-				<div id="numTodos"></div>
-				<div class="row">
-					<div class="col-12" id="todos">
-					</div>
+		</div>
+	</div>
+	<div class="row justify-content-end mx-2">
+		<div id="todo-col" class="col-12 col-md-3 text-center col-md-py-2 col-md-m-2">
+			<h2>Better Get Busy!</h2>
+			<div id="numTodos"></div>
+			<div class="row">
+				<div class="col-12" id="todos">
 				</div>
-				<form onsubmit="app.todoController.addTodo(event)" class="input-group">
-					<input name="description" placeholder="Enter New Chore..." type="text"
-						class="form-control bg-transparent border-0 text-light" aria-label="Small"
-						aria-describedby="inputGroup-sizing-sm" autocomplete="off">
-					<button type="submit" class="border-0 bg-transparent"><i
-							class="fa fa-plus text-success text-left align-self-center"></i></button>
 			</div>
+			<form onsubmit="app.todoController.addTodo(event)" class="input-group">
+				<input name="description" placeholder="Enter New Chore..." type="text"
+					class="form-control bg-transparent border-0 text-light" aria-label="Small"
+					aria-describedby="inputGroup-sizing-sm" autocomplete="off">
+				<button type="submit" class="border-0 bg-transparent"><i
+						class="fa fa-plus text-success text-left align-self-center"></i></button>
 		</div>
 	</div>
-<footer>
-	<div class="container col-md-fixed-bottom">
-		<div class="row justify-content-center my-5">
-			<div class="col-12"></div>
-			<div id="quote">
-				The Quote
+	<footer>
+		<div class="container col-md-fixed-bottom">
+			<div class="row justify-content-center col-md-my-5">
+				<div class="col-12"></div>
+				<div id="quote">
+					The Quote
+				</div>
 			</div>
 		</div>
-	</div>
-</footer>
+	</footer>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
 	<!-- jQuery first, then Popper.js, then Bootstrap JS, then Axios -->
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
