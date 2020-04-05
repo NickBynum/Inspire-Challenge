@@ -26,15 +26,13 @@ class TodoService {
         let newTodo = new Todo(res.data.data);
         let todos = [newTodo, ...store.State.todos];
         store.commit("todos", todos);
-        console.log(todo);
-
       })
       .catch(err => console.error(err));
   }
 
   toggleTodoStatusAsync(todoId) {
     let todo = store.State.todos.find(todo => todo.id == todoId);
-    console.log(todo);
+    console.log("registering the click of checkbox");
     
     //TODO Make sure that you found a todo,
     //		and if you did find one
@@ -42,6 +40,7 @@ class TodoService {
 
     todoApi.put(todoId, todo);
     //TODO do you care about this data? or should you go get something else?
+    
   }
 
   removeTodoAsync(todoId) {
