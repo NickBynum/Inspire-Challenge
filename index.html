@@ -13,23 +13,23 @@
 	<link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body id="bg-image">
+<body id="bg-image" class="img-fluid">
 	<div class="container-fluid">
 		<div class="row mt-5">
 			<div class="col-12">
 				<div class="row justify-content-between">
 					<div class="col-12 col-md-3">
 						<!-- Search form -->
-						<form class="form-inline d-flex justify-content-center md-form form-sm mt-0" method="get"
+						<form class="form-inline d-flex justify-content-center md-form form-sm mt-0" autocomplete="off" method="get"
 							action="http://www.google.com/search">
 							<i class="fa fa-search" aria-hidden="true"></i>
-							<input id="searchInput" class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search"
-								aria-label="Search">
+							<input id="searchInput" name="q" class="form-control form-control-sm ml-3 w-75" type="text"
+								placeholder="Search" aria-label="Search">
 						</form>
 					</div>
 					<div id="container1" class="col-12 col-md-6"></div>
 					<div class="col-12 col-md-3 pl-5 d-flex col-md-justify-content-end justify-content-center align-self-start">
-						<div id="weather" class="px-5">
+						<div id="weather" class="px-5 ml-5">
 						</div>
 					</div>
 				</div>
@@ -65,10 +65,11 @@
 	</div>
 	<footer>
 		<div class="container">
-			<div class="row justify-content-center col-md-my-5 fixed-bottom">
-				<div class="col-10 text-center"></div>
-				<div id="quote">
-					The Quote
+			<div class="row justify-content-center my-5 fixed-bottom">
+				<div class="col-6 text-center">
+					<div id="quote">
+						The Quote
+					</div>
 				</div>
 			</div>
 		</div>
