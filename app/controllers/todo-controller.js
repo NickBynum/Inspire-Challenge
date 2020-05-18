@@ -11,6 +11,11 @@ function _drawTodos() {
   document.getElementById("numTodos").innerHTML = `<p>Chores Left: ${todos.length}<p>`  
 }
 
+function drawTime() {
+  let time = new Date()
+  document.getElementById("clock").innerHTML = time.toLocaleTimeString(); 
+}
+
 export default class TodoController {
   constructor() {
     //TODO Remember to register your subscribers **done**

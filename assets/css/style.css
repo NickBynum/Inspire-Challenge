@@ -31,6 +31,17 @@ body {
   text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
 }
 
+.contrast-text {
+  color: whitesmoke;
+  text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
+  font-size: 3rem;
+}
+.gen-text {
+  color: whitesmoke;
+  text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
+  font-size: 1rem;
+}
+
 #weather span {
   z-index: 1;
   color: whitesmoke;
@@ -38,10 +49,21 @@ body {
   text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
 }
 
-#clock i{
+/* #clock i{
   color: whitesmoke;
   font-size: 15rem;
   text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
+} */
+
+.searchInput::-webkit-input-placeholder { 
+font-family: FontAwesome;
+font-weight: normal;
+overflow: visible;
+vertical-align: top;
+display: inline-block !important;
+padding-left: 5px;
+padding-top: 2px;
+color: hsl(9, 40%, 60%);
 }
 
 @media only screen and (min-width: 320px) and (max-width: 767px) {
