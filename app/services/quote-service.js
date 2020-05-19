@@ -15,7 +15,7 @@ class QuoteService {
   getQuotes() {
     _quoteApi.get()
       .then(res => {
-        store.commit('quote', res.data.quote.body)
+        store.commit('quote', res.data.quote)
       })
       .catch(err => console.error(err))
   }

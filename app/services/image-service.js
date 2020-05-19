@@ -13,8 +13,8 @@ class ImageService {
   this.getImage()
 }
 
-getImage() {
-  imgApi
+async getImage() {
+  await imgApi
   .get()
   .then(res => {
     console.log(res.data)

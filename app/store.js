@@ -15,7 +15,7 @@ let _state = {
     image: {},
 /**@type {Quote}*/
     // @ts-ignore
-    quote: {}
+    quote: {},
 };
 
 /** Collection of listeners to be called based on keyed state changes
@@ -25,7 +25,7 @@ let _listeners = {
   weather: [],
   todos: [],
   image: [],
-  quote: []
+  quote: [],
 };
 
 /**
