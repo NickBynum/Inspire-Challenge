@@ -9,6 +9,7 @@ let _state = {
   weather: new Weather({ name: "loading", main: { temp: 0.0 } }), //temporary fake data
   
   /**@type {Todo[]}*/
+  todos: [], 
     /** @type {Image} */
     // @ts-ignore
     image: {},
