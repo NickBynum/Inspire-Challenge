@@ -8,10 +8,9 @@ const todoApi = axios.create({
 });
 
 class TodoService {
-  getTodos() {
+  async getTodos() {
     //TODO Handle this response from the server **done**
-    console.log("Getting the Todo List");
-    todoApi.get()
+    await todoApi.get()
       .then(res => {
         let todos = res.data.data.map(rawTodoData => new Todo(rawTodoData));
         store.commit("todos", todos)
