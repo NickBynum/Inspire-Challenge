@@ -16,7 +16,6 @@ async getImage() {
   await imgApi
   .get()
   .then(res => {
-    console.log(res.data)
     store.commit('image', res.data)
     })
     .catch(err => console.error(err))

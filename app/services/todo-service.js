@@ -41,7 +41,6 @@ class TodoService {
   removeTodoAsync(todoId) {
     todoApi.delete(todoId)
       .then(res => {
-        console.log(res.data)
         this.getTodos()
       })
       .catch(err => console.error(err))
