@@ -7,7 +7,6 @@ const imgApi = axios.create({
   timeout: 8000
 });
 
-//TODO create methods to retrieve data trigger the update window when it is complete
 class ImageService {
   constructor(){
   this.getImage()

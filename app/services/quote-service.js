@@ -11,7 +11,6 @@ class QuoteService {
   constructor() {
     this.getQuotes()
   }
-  //TODO create methods to retrieve data trigger the update window when it is complete
   async getQuotes() {
     await _quoteApi.get()
       .then(res => {

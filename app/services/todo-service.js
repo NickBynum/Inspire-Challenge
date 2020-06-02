@@ -9,7 +9,6 @@ const todoApi = axios.create({
 
 class TodoService {
   async getTodos() {
-    //TODO Handle this response from the server **done**
     await todoApi.get()
       .then(res => {
         let todos = res.data.data.map(rawTodoData => new Todo(rawTodoData));
@@ -19,7 +18,6 @@ class TodoService {
   }
 
   addTodoAsync(todo) {
-    //TODO Handle this response from the server (hint: what data comes back, do you want this?)
     todoApi.post("", todo)
       .then(res => {
         let newTodo = new Todo(res.data.data);
@@ -31,17 +29,12 @@ class TodoService {
 
   toggleTodoStatusAsync(todoId) {
     let todo = store.State.todos.find(todo => todo.id == todoId);
-    console.log("registering the click of checkbox");
-    
-    //TODO Make sure that you found a todo,
-    //		and if you did find one
-    //		change its completed status to whatever it is not (ex: false => true or true => false)
 
     todoApi.put(todoId, todo).then(res => {
       todo.completed = !todo.completed
       store.commit("todos", todo.completed)
     })
-    // TODO do you care about this data? or should you go get something else?
+
     
   }
 

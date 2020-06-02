@@ -4,7 +4,6 @@ import QuoteController from "./controllers/quote-controller.js";
 import ImageController from "./controllers/image-controller.js";
 // import ClockController from "./controllers/clock-controller.js";
 
-//TODO Dont forget to register all your controllers **done**
 class App {
   constructor() {
     this.weatherController = new WeatherController();
