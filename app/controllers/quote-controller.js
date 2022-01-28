@@ -4,7 +4,7 @@ import store from "../store.js"
 function _drawQuotes() {
   
   // @ts-ignore
-  document.getElementById("quote").innerHTML = `<p>"${store.State.quote.body}"</p>
+  document.getElementById("quote").innerHTML = `<p>"${store.State.quote.content}"</p>
   <p>-${store.State.quote.author}</p>`
 }
 
